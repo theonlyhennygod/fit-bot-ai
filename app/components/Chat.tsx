@@ -44,7 +44,7 @@ const Chat = () => {
 
   const userColors = {
     user: '#00c0ff',
-    assistant: '#e02aff',
+    assistant: '#f4ff2a',
     function: '#fff',
     system: '#fff',
     tool: '#fff',
@@ -58,7 +58,7 @@ const Chat = () => {
           {messages.length > 0
           ? messages.map(m => (
               <div key={m.id} className="chat-line">
-                <span style={{color: userColors[m.role]}}>{m.role === 'user' ? 'User: ' : '⚡️Last Codebender: '}</span>
+                <span style={{color: userColors[m.role]}}>{m.role === 'user' ? 'User: ' : '⚡️Fit-Bot AI: '}</span>
                 {m.content}
               </div>
             ))
@@ -79,7 +79,7 @@ const Chat = () => {
     <>
       {renderResponse()}
       <form onSubmit={onSubmit} className="mainForm">
-        <input name="input-field" placeholder="Say anything" onChange={handleInputChange} value={input} />
+        <input name="input-field" placeholder="Speak to Fit-Bot" onChange={handleInputChange} value={input} />
         <button type="submit" className="mainButton" disabled={loading} onClick={() => setSubmitType('text')}>
           TEXT
         </button>

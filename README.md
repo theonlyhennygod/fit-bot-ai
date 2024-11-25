@@ -1,16 +1,16 @@
-# Codebender AI Template
+# Fit-Bot AI
 
 This project is a template code to start any AI project.
 
-It's a chat interface that allows you to talk with the Last Codebender. You can send him text messages by clicking on the text button or request an AI art image by clicking on the image button.
+It's a chat interface that allows you to talk with Fit-Bot. You can send it text messages by clicking on the text button or request an AI art image by clicking on the image button.
 
-This project is built using Nextjs. It utilizes the OpenAI GPT4 for chat completion and Replicate for image generation.
+This project is built using Next. It utilizes the OpenAI GPT4 for chat completion and DALL-E for image generation.
 
 <img src="app-demo.gif" alt="app demo" width=600>
 
 ## Getting Started
 
-First, duplicate the `.env` file into a new file named `.env.local`. Update the value of your [OpenAI API key](https://platform.openai.com/api-keys) and [Replicate API key](https://replicate.com/account/api-tokens) there.
+First, duplicate the `.env` file into a new file named `.env.local`. Update the value of your [OpenAI API key](https://platform.openai.com/api-keys).
 
 The first time you are running this project, you will need to install the dependencies. Run this command in your terminal:
 

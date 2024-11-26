@@ -102,6 +102,26 @@ h1 {
   background-color: #243fe8;
 }
 
+.thirdButton {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid #2ab1ff;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 900;
+  margin-left: 50px;
+  margin-right: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.thirdButton:hover {
+  background-color: #243fe8;
+}
+
 button:disabled,
 button:disabled:hover {
   background-color: #b7aeb9;

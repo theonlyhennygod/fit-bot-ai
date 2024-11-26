@@ -38,3 +38,30 @@ export async function POST(req: Request, res: Response) {
     })
   }
 }
+
+export async function GET(req: Request, res: Response) {
+  const url = new URL(req.url);
+  const imageUrl = url.searchParams.get('imageUrl');
+
+  if (!imageUrl) {
+    return new Response('Image URL is required', {
+      status: 400,
+    });
+  }
+
+  try {
+    const response = await fetch(imageUrl);
+    const blob = await response.blob();
+    return new Response(blob, {
+      headers: {
+        'Content-Type': 'image/png',
+        'Content-Disposition': 'attachment; filename="generated_image.png"',
+      },
+    });
+  } catch (error: any) {
+    console.error(error);
+    return new Response(error?.message || error?.toString(), {
+      status: 500,
+    });
+  }
+}
